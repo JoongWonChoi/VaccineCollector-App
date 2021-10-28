@@ -1,0 +1,39 @@
+<Android Activity 개요> 
+Activity란 안드로이드 어플리케이션을 구성한느 기본 요소.
+UI가 생성되는 틀을 제공, 기본적으로 화면에 나타남
+Activity와 달리 화면에 나타나지는 않지만 어플리케이션 뒷 단에서 작업을 진행하는 Service가 존재.
+어플리케이션은 Activity의 모음!
+=============================================================
+1. onCreate() : Activity가 생성, 화면 정의할 때 사용, 완료 시 onStart()호출
+2. onStart() : Activity가 사용자에게 보여질 때 / 아직 사용자와 상호작용은 X
+3. onResume() : 사용자와 상호작용 하는 단계, 주로 어플의 기능이 여기에 설정됨
+4. onPause()
+5. onStop()
+6. onRestart()
+7. onDestroy()
+==============================================================
+
+1. onCreate() 메소드로 Activity 생성
+super.onCreate(savedInstanceState) // super class 호출
+*이 때의 savedInstanceState 파라미터를 수신하며 이 파라미터는 Activity의 이전 상태를 저장하는 Bundle 객체.
+*Activity가 처음 생성된 경우에 savedInstanceState==null
+2. setContentView() 메소드로 생성한 Activity에 layout 설정
+setContentView(R.layout.activity_main) => 사용자가 생성한 Resource들의 layout 디렉토리에 있는 'activity_main.xml' 레이아웃으로 설정.
+3. onCreate() 메소드가 종료되는 직후 onStart()콜백 메소드가 호출
+
+
+
+
+
+<adroid bundle> : 여러가지 타입의 값을 저장하는 Map 클래스
+아무거나 포장할 수 있는 상자, 이 포장 박스(bundle)을 이용하면 이리저리 통신 가능
+Activity 간의 정보를 주고 받을 때 Bundle클래스를 사용하여 여러가지의 데이터를 전송
+
+<AppCompatActivity> : 안드로이드의 하위버전을 지원하는 Activity 일종.
+
+
+<android Intent>
+대부분의 어플리케이션은 하나 이상의 View를 합친 모음.(View=>화면을 의미한다고 보면 될거같다.)
+따라서 어플리케이션 개발 시 웹개발과 마찬가지로 view간의 이동과 데이터 전달은 매우 중요. => Intent를 통해 구현
+인텐트는 앱 컴포넌트가 무엇을 할 것인지를 담는 '메시지 객체'.
+메시지가 의사소통 및 정보 전달을 위해 이루어지듯, 인텐트는 다른 액티비티 / 서비스 / 브로드캐스트 리시버 / 컨텐트 프로바이더 등을 실행하기 위한 데이터를 주고 받기 위한 용도로 사용.
