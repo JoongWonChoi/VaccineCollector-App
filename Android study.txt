@@ -20,6 +20,21 @@ super.onCreate(savedInstanceState) // super class 호출
 2. setContentView() 메소드로 생성한 Activity에 layout 설정
 setContentView(R.layout.activity_main) => 사용자가 생성한 Resource들의 layout 디렉토리에 있는 'activity_main.xml' 레이아웃으로 설정.
 3. onCreate() 메소드가 종료되는 직후 onStart()콜백 메소드가 호출
+==================================================
+?어떻게 R.layout.activity_main이라는 아이디(변수)가 xml 레이아웃 일을 가리킬 수 있을까?
+=>안드로이드에는 자동으로 리소스를 관리해주는 기능이 있다.
+우리가 안드로이드에서 생성하는 모든 리소스에 자동으로 ID를 부여하고있는데, 그것이 바로 리소스 관리자인 "R.java" 이다.
+그래서 이미지를 넣거나 레이아웃을 생성하거나 View에 아이디를 부여하거나 등등 모든 리소스 작업들이 "R" 클래스 내부에서 자동으로 진행됨.
+따라서 리소스를 직접 가지고 올 필요가 없이 이 리소스 아이디로 간편하게 사용 가능.
+
+레이아웃에 설정된 뷰들은 초기 설정만 정의해놓은 것일 뿐, 이벤트를 받거나 뷰에 변화를 줄 수 없음.
+따라서 이벤트 처리를 위해서는 자바 소스코드에 변화를 줘야함
+이렇게 레이아웃에 설정된 뷰들을 가져오는 메소드가 "findViewById"
+
+xml(레이아웃)파일에서 버튼, inputtext 등의 아이디를 설정
+그 후 findViewById(R.id."설정한id") 로 불러올 수 있음.
+
+
 
 
 
