@@ -60,7 +60,3 @@ Activity 간의 정보를 주고 받을 때 Bundle클래스를 사용하여 여�
 <wrap_content와 match_parent 차이>
 wrap_content : 내부 내용물 크기에 맞춰 크기 자동 조절
 match_parent : 부모의 크기에 맞춤 (if부모가 화면 전체 = 화면 전체 크기만큼 크기 고정")
-
-
-
-

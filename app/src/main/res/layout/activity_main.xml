@@ -1,40 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+<!-- Home -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToOutline="true"
+    >
+    <!-- Ellipse 1 -->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+    <View
+        android:id="@+id/ellipse_1"
+        android:layout_width="246dp"
+        android:layout_height="209dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="148d p"
+        android:fillColor="#3371AA"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="246dp"
+    android:height="209dp"
+    android:viewportWidth="246"
+    android:viewportHeight="209"
+        >
 
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:textSize="20dp"
-                android:id="@+id/inputNumber"
-                android:hint="원하는 숫자를 입력"
-                android:textColorHint="#c9c9c9"
-                android:inputType="number"/>
+    <group>
 
-        </LinearLayout>
+        <clip-path
+            android:pathData="M246 104.5C246 162.214 190.931 209 123 209C55.069 209 0 162.214 0 104.5C0 46.7862 55.069 0 123 0C190.931 0 246 46.7862 246 104.5Z"
+            />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="결과보기"
-            android:textSize="20dp"
-            android:id="@+id/btn"/>
+        <path
+            android:pathData="M0 0V209H246V0"
+            android:fillColor="#6B3371AA"
+            />
 
+    </group>
 
-    </LinearLayout>
-</LinearLayout>
+    </vector>
+
+<RelativeLayout/>
