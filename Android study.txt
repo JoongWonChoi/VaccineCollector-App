@@ -49,7 +49,7 @@ xml(레이아웃)파일에서 버튼, inputtext 등의 아이디를 설정
 Intent 객체 선언 시 선언해줘야할 파라미터 : 현재 Activity, 전달받을 Activity
 Intent intent = new Intent(현재Acitivy.this, 전달받을Activity.class)와 같은 형식
 --putExtra("key",전달할 변수) => 데이터를 넘겨줄 함수. 넘겨줄 데이터의 이름(key)와 넘겨줄 데이터 기입
---startActivity(intent) : 전환받을 Activity로 전환!,, 그리고 현재 Activity를 종료하고 싶으면 finish()
+--startActivity(intent) : 전환받을 Activity로 전환!!! 그리고 현재 Activity를 종료하고 싶으면 finish()
 
 <adroid bundle> : 여러가지 타입의 값을 저장하는 Map 클래스
 아무거나 포장할 수 있는 상자, 이 포장 박스(bundle)을 이용하면 이리저리 통신 가능
